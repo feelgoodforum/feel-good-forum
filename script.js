@@ -10,37 +10,24 @@ showTime();
 setInterval(showTime, 1000);
 
 // ================================
-// TESTIMONIALS SLIDER
+// TESTIMONIAL AUTO ROTATOR
 // ================================
-let testimonialOffset = 0;
-const scroller = document.getElementById("testScroll");
+const testimonials = document.querySelectorAll('.testimonial-slider .testimonial');
+let testimonialIndex = 0;
 
-if (scroller) {
-  const testimonials = document.querySelectorAll(".testimonial");
-
-  function getSlideWidth() {
-    return scroller.clientWidth;
+if (testimonials.length) {
+  function showTestimonial(index) {
+    testimonials.forEach((t, i) => {
+      t.classList.toggle('active', i === index);
+    });
   }
 
-  function updatePosition() {
-    scroller.style.transform = `translateX(-${testimonialOffset}px)`;
-  }
+  // initial
+  showTestimonial(testimonialIndex);
 
-  document.getElementById("nextTest").addEventListener("click", () => {
-    const slideWidth = getSlideWidth();
-    const maxOffset = (testimonials.length - 1) * slideWidth;
-    testimonialOffset = Math.min(testimonialOffset + slideWidth, maxOffset);
-    updatePosition();
-  });
-
-  document.getElementById("prevTest").addEventListener("click", () => {
-    const slideWidth = getSlideWidth();
-    testimonialOffset = Math.max(testimonialOffset - slideWidth, 0);
-    updatePosition();
-  });
-
-  window.addEventListener("resize", () => {
-    testimonialOffset = 0;
-    updatePosition();
-  });
+  // rotate every 7 seconds
+  setInterval(() => {
+    testimonialIndex = (testimonialIndex + 1) % testimonials.length;
+    showTestimonial(testimonialIndex);
+  }, 7000);
 }
