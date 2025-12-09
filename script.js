@@ -10,24 +10,39 @@ showTime();
 setInterval(showTime, 1000);
 
 // ================================
-// TESTIMONIAL AUTO ROTATOR
+// TESTIMONIAL CAROUSEL (AUTO SLIDE)
 // ================================
-const testimonials = document.querySelectorAll('.testimonial-slider .testimonial');
-let testimonialIndex = 0;
+const track = document.querySelector('.testimonial-track');
+const slides = document.querySelectorAll('.testimonial-slide');
+const dotsContainer = document.querySelector('.testimonial-dots');
 
-if (testimonials.length) {
-  function showTestimonial(index) {
-    testimonials.forEach((t, i) => {
-      t.classList.toggle('active', i === index);
-    });
+if (track && slides.length) {
+  let index = 0;
+
+  // create dots
+  slides.forEach((_, i) => {
+    const dot = document.createElement('span');
+    dot.className = 'testimonial-dot' + (i === 0 ? ' active' : '');
+    dotsContainer.appendChild(dot);
+  });
+
+  const dots = dotsContainer.querySelectorAll('.testimonial-dot');
+
+  function goToSlide(i) {
+    index = i;
+    const offset = -index * 100;
+    track.style.transform = `translateX(${offset}%)`;
+    dots.forEach((d, j) => d.classList.toggle('active', j === index));
   }
 
-  // initial
-  showTestimonial(testimonialIndex);
-
-  // rotate every 7 seconds
+  // auto‑play every 7 seconds
   setInterval(() => {
-    testimonialIndex = (testimonialIndex + 1) % testimonials.length;
-    showTestimonial(testimonialIndex);
+    const next = (index + 1) % slides.length;
+    goToSlide(next);
   }, 7000);
+
+  // allow click on dots (optional but nice)
+  dots.forEach((dot, i) => {
+    dot.addEventListener('click', () => goToSlide(i));
+  });
 }
