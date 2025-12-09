@@ -728,98 +728,91 @@
         /* ============================================
            TESTIMONIALS SECTION
            ============================================ */
-        #testimonials {
-            background: var(--soft-white);
-        }
+       #testimonials {
+  background: var(--soft-white);
+}
 
-        .testimonials-intro {
-            text-align: center;
-            margin-bottom: 50px;
-        }
+.testimonials-intro {
+  text-align: center;
+  margin-bottom: 40px;
+}
 
-        .test-wrap {
-            overflow: hidden;
-            position: relative;
-            margin-top: 30px;
-        }
+.test-wrap {
+  max-width: 700px;
+  margin: 0 auto;
+  position: relative;
+}
 
-        .test-scroller {
-            display: flex;
-            gap: 24px;
-            transition: transform 0.5s cubic-bezier(0.22, 0.9, 0.28, 1);
-        }
+.test-scroller {
+  display: flex;
+  transition: transform 0.5s cubic-bezier(0.22, 0.9, 0.28, 1);
+}
 
-        .testimonial {
-            min-width: 320px;
-            flex-shrink: 0;
-            background: linear-gradient(135deg, var(--sage), var(--sage-dark));
-            color: white;
-            padding: 28px;
-            border-radius: 14px;
-            position: relative;
-            box-shadow: 0 10px 30px rgba(168, 181, 160, 0.2);
-        }
+.testimonial {
+  min-width: 100%;
+  background: linear-gradient(135deg, var(--sage), var(--sage-dark));
+  color: white;
+  padding: 32px 28px;
+  border-radius: 18px;
+  position: relative;
+  box-shadow: 0 18px 40px rgba(168, 181, 160, 0.35);
+}
 
-        .testimonial::before {
-            content: '"';
-            font-size: 3rem;
-            opacity: 0.2;
-            position: absolute;
-            top: 10px;
-            left: 15px;
-            font-family: 'Playfair Display', serif;
-        }
+.testimonial::before {
+  content: "“";
+  font-size: 4rem;
+  opacity: 0.18;
+  position: absolute;
+  top: 10px;
+  left: 18px;
+  font-family: "Playfair Display", serif;
+}
 
-        .testimonial p {
-            color: white;
-            margin-bottom: 16px;
-            line-height: 1.7;
-            font-size: 1rem;
-            font-style: italic;
-        }
+.testimonial p {
+  color: white;
+  margin-bottom: 20px;
+  line-height: 1.8;
+  font-size: 1.02rem;
+}
 
-        .testimonial-author {
-            font-weight: 600;
-            font-size: 0.95rem;
-            margin-top: 16px;
-            padding-top: 16px;
-            border-top: 1px solid rgba(255, 255, 255, 0.2);
-        }
+.testimonial-author {
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding-top: 10px;
+  border-top: 1px solid rgba(255, 255, 255, 0.35);
+  opacity: 0.95;
+}
 
-        .testimonial-role {
-            font-size: 0.85rem;
-            opacity: 0.9;
-        }
+.test-controls {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 20px;
+}
 
-        .test-controls {
-            display: flex;
-            gap: 12px;
-            justify-content: center;
-            margin-top: 28px;
-            flex-wrap: wrap;
-        }
+.test-controls button {
+  padding: 8px 14px;
+  border-radius: 999px;
+  border: 0;
+  background: white;
+  color: var(--sage-dark);
+  cursor: pointer;
+  font-size: 1.2rem;
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+  transition: var(--transition);
+}
 
-        .test-controls button {
-            padding: 10px 16px;
-            border-radius: 8px;
-            border: 0;
-            background: var(--sage);
-            color: white;
-            cursor: pointer;
-            font-size: 1.2rem;
-            width: 44px;
-            height: 44px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: var(--transition);
-            font-weight: bold;
-        }
+.test-controls button:hover {
+  background: var(--sage);
+  color: white;
+  transform: translateY(-1px);
+}
 
-        .test-controls button:hover {
-            background: var(--sage-dark);
-            transform: scale(1.05);
-        }
 
         /* ============================================
            FAQ SECTION
@@ -1630,79 +1623,80 @@
 
 <!-- ===== TESTIMONIALS ===== -->
 <section id="testimonials">
-    <div class="wrap">
-        <div class="testimonials-intro">
-            <h2>What Clients Say</h2>
-            <p style="color: var(--muted-txt); font-size: 1.05rem;">
-                Feedback from people who've experienced transformation through therapy.
-            </p>
-        </div>
-
-        <div class="test-wrap">
-            <div class="test-scroller" id="testScroll">
-                <div class="testimonial">
-                    <p>
-                        "Dhwani created such a safe space for me to explore my trauma. 
-                        I felt heard and understood in a way I never had before. This work has genuinely changed my life."
-                    </p>
-                    <div class="testimonial-author">
-                        — Sarah M.
-                        <div class="testimonial-role">Individual Therapy Client</div>
-                    </div>
-                </div>
-
-                <div class="testimonial">
-                    <p>
-                        "My partner and I were on the verge of breaking up. Couples therapy with Dhwani helped us 
-                        actually hear each other again. We rediscovered why we fell in love in the first place."
-                    </p>
-                    <div class="testimonial-author">
-                        — Alex & Jordan
-                        <div class="testimonial-role">Couples Therapy Clients</div>
-                    </div>
-                </div>
-
-                <div class="testimonial">
-                    <p>
-                        "My therapist never made me feel like my problems were too big or too small. 
-                        The tools I learned have become part of my daily life. I genuinely look forward to our sessions."
-                    </p>
-                    <div class="testimonial-author">
-                        — Priya K.
-                        <div class="testimonial-role">Anxiety & Stress Management</div>
-                    </div>
-                </div>
-
-                <div class="testimonial">
-                    <p>
-                        "I was skeptical about therapy, but Dhwani's warm, non-judgmental approach made all the difference. 
-                        I finally feel like I can be myself without apology."
-                    </p>
-                    <div class="testimonial-author">
-                        — Marcus J.
-                        <div class="testimonial-role">Individual Therapy Client</div>
-                    </div>
-                </div>
-
-                <div class="testimonial">
-                    <p>
-                        "As a young adult, I felt lost and directionless. Working with Dhwani helped me clarify my values 
-                        and build confidence in my choices. I'm genuinely grateful."
-                    </p>
-                    <div class="testimonial-author">
-                        — Zara T.
-                        <div class="testimonial-role">Youth & Identity Exploration</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="test-controls">
-            <button id="prevTest">‹</button>
-            <button id="nextTest">›</button>
-        </div>
+  <div class="wrap">
+    <div class="testimonials-intro">
+      <h2>What Clients Say</h2>
+      <p style="color: var(--muted-txt); font-size: 1.05rem;">
+        Words from people who’ve felt supported, seen, and heard in therapy.
+      </p>
     </div>
+
+    <div class="test-wrap">
+      <div class="test-scroller" id="testScroll">
+        <div class="testimonial">
+          <p>
+            “Dhwani created such a safe space for me to explore my trauma. I felt
+            heard and understood in a way I never had before. This work has
+            genuinely changed my life.”
+          </p>
+          <div class="testimonial-author">
+            — Client, Individual Therapy
+          </div>
+        </div>
+
+        <div class="testimonial">
+          <p>
+            “My partner and I were on the verge of breaking up. Couples therapy
+            with Dhwani helped us actually hear each other again and reconnect
+            with why we chose each other.”
+          </p>
+          <div class="testimonial-author">
+            — Couple, Relationship Therapy
+          </div>
+        </div>
+
+        <div class="testimonial">
+          <p>
+            “The tools I’ve learned have become part of my daily life. I finally
+            have practical ways to manage anxiety instead of feeling overwhelmed
+            by it.”
+          </p>
+          <div class="testimonial-author">
+            — Client, Anxiety & Stress
+          </div>
+        </div>
+
+        <div class="testimonial">
+          <p>
+            “I was skeptical about therapy, but Dhwani’s warm, non‑judgmental
+            approach made all the difference. I feel like I can show up as my
+            real self.”
+          </p>
+          <div class="testimonial-author">
+            — Client, Long‑Term Therapy
+          </div>
+        </div>
+
+        <div class="testimonial">
+          <p>
+            “As a young adult, I felt lost and directionless. Our sessions gave
+            me clarity, language for my emotions, and confidence to make aligned
+            choices.”
+          </p>
+          <div class="testimonial-author">
+            — Client, Young Adult
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="test-controls">
+      <button id="prevTest" aria-label="Previous testimonial">‹</button>
+      <button id="nextTest" aria-label="Next testimonial">›</button>
+    </div>
+  </div>
 </section>
+
 
 <!-- ===== FAQ ===== -->
 <section id="faq">
