@@ -725,178 +725,133 @@
             font-weight: bold;
         }
 
-        /* ============================================
-           TESTIMONIALS SECTION
-           ============================================ */
-       #testimonials {
-  background: var(--soft-white);
-}
-
-.testimonials-intro {
-  text-align: center;
-  margin-bottom: 40px;
-}
-
-.test-wrap {
-  max-width: 700px;
-  margin: 0 auto;
-  position: relative;
-}
-
-.test-scroller {
-  display: flex;
-  transition: transform 0.5s cubic-bezier(0.22, 0.9, 0.28, 1);
-}
-
-.testimonial {
-  min-width: 100%;
-  background: linear-gradient(135deg, var(--sage), var(--sage-dark));
-  color: white;
-  padding: 32px 28px;
-  border-radius: 18px;
-  position: relative;
-  box-shadow: 0 18px 40px rgba(168, 181, 160, 0.35);
-}
-
-.testimonial::before {
-  content: "“";
-  font-size: 4rem;
-  opacity: 0.18;
-  position: absolute;
-  top: 10px;
-  left: 18px;
-  font-family: "Playfair Display", serif;
-}
-
-.testimonial p {
-  color: white;
-  margin-bottom: 20px;
-  line-height: 1.8;
-  font-size: 1.02rem;
-}
-
-.testimonial-author {
-  font-weight: 600;
-  font-size: 0.95rem;
-  padding-top: 10px;
-  border-top: 1px solid rgba(255, 255, 255, 0.35);
-  opacity: 0.95;
-}
-
-.test-controls {
-  display: flex;
-  gap: 12px;
-  justify-content: center;
-  margin-top: 20px;
-}
-
-.test-controls button {
-  padding: 8px 14px;
-  border-radius: 999px;
-  border: 0;
-  background: white;
-  color: var(--sage-dark);
-  cursor: pointer;
-  font-size: 1.2rem;
-  width: 42px;
-  height: 42px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
-  transition: var(--transition);
-}
-
-.test-controls button:hover {
-  background: var(--sage);
-  color: white;
-  transform: translateY(-1px);
-}
-
-
-        /* ============================================
-           FAQ SECTION
-           ============================================ */
-        #faq {
-            background: var(--beige);
+       /* Testimonials */
+        .testimonials {
+            background: linear-gradient(135deg, #f7f3ec, white);
         }
 
-        .faq-intro {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-
-        .faq-grid {
+        .testimonials-grid {
             display: grid;
-            grid-template-columns: 1fr;
-            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .testimonial {
+            padding: 28px;
+            background: white;
+            border: 2px solid #e8dfd5;
+            border-radius: 16px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+
+        .testimonial:hover {
+            border-color: #a8b5a0;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            transform: translateY(-4px);
+        }
+
+        .stars {
+            color: #e8997a;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+            letter-spacing: 2px;
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            color: #555;
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+            font-size: 0.95rem;
+        }
+
+        .testimonial-author {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+            color: #2d3933;
+            font-size: 1rem;
+        }
+
+        .testimonial-role {
+            font-size: 0.85rem;
+            color: #a8b5a0;
+        }
+
+
+        /* FAQ */
+        .faq {
+            background: white;
+        }
+
+        .faq-container {
             max-width: 800px;
             margin: 0 auto;
         }
 
         .faq-item {
-            background: white;
+            margin-bottom: 16px;
+            border: 1px solid #e8dfd5;
             border-radius: 12px;
             overflow: hidden;
-            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
-            transition: var(--transition);
+            transition: all 0.3s ease;
         }
 
         .faq-item:hover {
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
         }
 
         .faq-question {
-            padding: 24px;
-            background: var(--soft-white);
+            padding: 20px;
+            background: #f7f3ec;
             cursor: pointer;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            font-weight: 500;
             user-select: none;
-            transition: var(--transition);
-            border-left: 4px solid transparent;
+            transition: all 0.3s ease;
         }
 
-        .faq-item.active .faq-question {
-            background: var(--glass-bg);
-            border-left-color: var(--sage);
+        .faq-question:hover {
+            background: #f0e8e0;
         }
 
-        .faq-question h3 {
-            margin: 0;
-            font-size: 1.05rem;
-            color: var(--txt);
-            flex: 1;
+        .faq-question.active {
+            background: #a8b5a0;
+            color: white;
         }
 
         .faq-toggle {
-            font-size: 1.5rem;
-            color: var(--sage);
+            font-size: 1.2rem;
             transition: transform 0.3s ease;
-            flex-shrink: 0;
-            margin-left: 16px;
         }
 
-        .faq-item.active .faq-toggle {
+        .faq-question.active .faq-toggle {
             transform: rotate(180deg);
         }
 
         .faq-answer {
+            padding: 0;
+            background: white;
             max-height: 0;
             overflow: hidden;
-            transition: max-height 0.3s ease;
+            transition: max-height 0.3s ease, padding 0.3s ease;
         }
 
-        .faq-item.active .faq-answer {
+        .faq-answer.active {
+            padding: 20px;
             max-height: 500px;
         }
 
-        .faq-answer-content {
-            padding: 24px;
-            color: var(--muted-txt);
+        .faq-answer p {
+            margin: 0;
+            color: #555;
             line-height: 1.8;
         }
+
 
         /* ============================================
            CONTACT SECTION
@@ -1346,6 +1301,7 @@
                     <li><a href="#services">Services</a></li>
                     <li><a href="#modalities">Modalities</a></li>
                     <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
@@ -1621,201 +1577,113 @@
     </div>
 </section>
 
-<!-- ===== TESTIMONIALS ===== -->
-<section id="testimonials">
-  <div class="wrap">
-    <div class="testimonials-intro">
-      <h2>What Clients Say</h2>
-      <p style="color: var(--muted-txt); font-size: 1.05rem;">
-        A rotating glimpse into how clients describe their therapy experience.
-      </p>
+<!-- Testimonials Section -->
+<section class="testimonials" id="testimonials">
+    <div class="container">
+        <div class="section-title">
+            <h2>What Clients Say</h2>
+            <p>Real experiences from people who've found healing and growth</p>
+        </div>
+
+        <div class="testimonials-grid">
+            <div class="testimonial scroll-animate">
+                <p class="testimonial-text">"Working with this practice transformed my relationship with myself. I finally feel heard and safe."</p>
+                <p class="testimonial-author">Sarah M.</p>
+                <p class="testimonial-role">Individual Therapy Client</p>
+            </div>
+
+            <div class="testimonial scroll-animate">
+                <p class="testimonial-text">"The couple's work helped us understand each other on a deeper level. Highly recommended!"</p>
+                <p class="testimonial-author">Rahul & Priya</p>
+                <p class="testimonial-role">Couples Therapy Clients</p>
+            </div>
+
+            <div class="testimonial scroll-animate">
+                <p class="testimonial-text">"As a therapist myself, I was impressed by the depth and sensitivity of this practice."</p>
+                <p class="testimonial-author">Dr. Amit P.</p>
+                <p class="testimonial-role">Mental Health Professional</p>
+            </div>
+        </div>
     </div>
-
-    <div class="testimonial-carousel" aria-live="polite">
-      <div class="testimonial-track">
-        <article class="testimonial-slide">
-          <p>
-            “Dhwani created such a safe space for me to explore my trauma. I felt
-            heard and understood in a way I never had before. This work has
-            genuinely changed my life.”
-          </p>
-          <div class="testimonial-author">
-            — Client, Individual Therapy
-          </div>
-        </article>
-
-        <article class="testimonial-slide">
-          <p>
-            “My partner and I were on the verge of breaking up. Couples therapy
-            with Dhwani helped us actually hear each other again and reconnect
-            with why we chose each other.”
-          </p>
-          <div class="testimonial-author">
-            — Couple, Relationship Therapy
-          </div>
-        </article>
-
-        <article class="testimonial-slide">
-          <p>
-            “The tools I’ve learned have become part of my daily life. I finally
-            have practical ways to manage anxiety instead of feeling overwhelmed
-            by it.”
-          </p>
-          <div class="testimonial-author">
-            — Client, Anxiety & Stress
-          </div>
-        </article>
-
-        <article class="testimonial-slide">
-          <p>
-            “I was skeptical about therapy, but Dhwani’s warm, non‑judgmental
-            approach made all the difference. I feel like I can show up as my
-            real self.”
-          </p>
-          <div class="testimonial-author">
-            — Client, Long‑Term Therapy
-          </div>
-        </article>
-
-        <article class="testimonial-slide">
-          <p>
-            “As a young adult, I felt lost and directionless. Our sessions gave
-            me clarity, language for my emotions, and confidence to make aligned
-            choices.”
-          </p>
-          <div class="testimonial-author">
-            — Client, Young Adult
-          </div>
-        </article>
-      </div>
-
-      <div class="testimonial-dots" aria-hidden="true"></div>
-    </div>
-  </div>
 </section>
 
 
+<!-- FAQ Section -->
+<section class="faq" id="faq">
+    <div class="container">
+        <div class="section-title">
+            <h2>Frequently Asked Questions</h2>
+            <p>Everything you need to know about getting started</p>
+        </div>
 
-
-<!-- ===== FAQ ===== -->
-<section id="faq">
-    <div class="wrap">
-        <h2>Frequently Asked Questions</h2>
-        <p style="text-align: center; color: var(--muted-txt); max-width: 700px; margin: 0 auto 40px; font-size: 1.05rem;">
-            Got questions? Here are answers to common concerns that help people decide if therapy is right for them.
-        </p>
-
-        <div class="faq-grid">
+        <div class="faq-container">
             <div class="faq-item">
-                <div class="faq-question">
-                    <h3>What happens in a first session?</h3>
-                    <span class="faq-toggle">+</span>
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <span>What happens in a first session?</span>
+                    <span class="faq-toggle">▼</span>
                 </div>
                 <div class="faq-answer">
-                    <div class="faq-answer-content">
-                        <p>
-                            Your first session is about building comfort and understanding. We'll start slowly. 
-                            I'll listen to what brings you in, ask clarifying questions to understand your world, 
-                            and explain how I work. You're always in control of the pace. Many people feel nervous before their first session—that's completely normal. We'll go at your speed.
-                        </p>
-                    </div>
+                    <p>In your first session, we'll spend time getting to know each other. I'll listen to your story, understand your goals and concerns, explain my approach, and together we'll determine if we're a good fit and create an initial plan.</p>
                 </div>
             </div>
 
             <div class="faq-item">
-                <div class="faq-question">
-                    <h3>How long is one session?</h3>
-                    <span class="faq-toggle">+</span>
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <span>How long is one session?</span>
+                    <span class="faq-toggle">▼</span>
                 </div>
                 <div class="faq-answer">
-                    <div class="faq-answer-content">
-                        <p>
-                            Standard sessions are 50 minutes. This allows sufficient time for deep work and meaningful conversation. 
-                            Some clients prefer 90-minute sessions for intensive work or initial assessments. We can discuss what feels 
-                            right for your needs and goals.
-                        </p>
-                    </div>
+                    <p>Standard sessions are 50 minutes, with a 10-minute admin buffer. This gives us meaningful time to explore and work together without feeling rushed.</p>
                 </div>
             </div>
 
             <div class="faq-item">
-                <div class="faq-question">
-                    <h3>Is everything I share confidential?</h3>
-                    <span class="faq-toggle">+</span>
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <span>Is everything I share confidential?</span>
+                    <span class="faq-toggle">▼</span>
                 </div>
                 <div class="faq-answer">
-                    <div class="faq-answer-content">
-                        <p>
-                            Yes, with a few legal exceptions. I'm legally required to break confidentiality if there's risk of serious harm to yourself or others, 
-                            abuse of minors or elderly persons, or court orders. We'll discuss these limits in detail during 
-                            your first session.
-                        </p>
-                    </div>
+                    <p>Yes, with very few exceptions (safety concerns, court orders). Everything you share stays between us. Your privacy and trust are sacred.</p>
                 </div>
             </div>
 
             <div class="faq-item">
-                <div class="faq-question">
-                    <h3>Do you specialize in my specific issue?</h3>
-                    <span class="faq-toggle">+</span>
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <span>Do you specialize in my specific issue?</span>
+                    <span class="faq-toggle">▼</span>
                 </div>
                 <div class="faq-answer">
-                    <div class="faq-answer-content">
-                        <p>
-                            I specialize in anxiety, depression, trauma, relationship issues, life transitions, burnout, 
-                            identity exploration, and grief. I also work with adolescents and young adults navigating complex 
-                            developmental challenges. If you have a concern not listed, reach out—I may still be able to help 
-                            or refer you to a specialist who can.
-                        </p>
-                    </div>
+                    <p>I work with a wide range of concerns: anxiety, depression, trauma, relationship issues, identity questions, life transitions, family dynamics, and workplace stress. If your specific need falls outside my expertise, I'm happy to refer you to a specialist.</p>
                 </div>
             </div>
 
             <div class="faq-item">
-                <div class="faq-question">
-                    <h3>Do you offer online sessions?</h3>
-                    <span class="faq-toggle">+</span>
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <span>Do you offer online sessions?</span>
+                    <span class="faq-toggle">▼</span>
                 </div>
                 <div class="faq-answer">
-                    <div class="faq-answer-content">
-                        <p>
-                            Yes! Online therapy is equally effective. Secure, private video sessions allow you to join from home 
-                            with a click. Research shows online therapy has the same positive outcomes as in-person therapy. 
-                            Some people prefer online for privacy or convenience; others prefer in-person. Your choice.
-                        </p>
-                    </div>
+                    <p>Yes! I offer secure, HIPAA-compliant video sessions from your home. Same professional care, greater convenience.</p>
                 </div>
             </div>
 
             <div class="faq-item">
-                <div class="faq-question">
-                    <h3>What if therapy doesn't work for us?</h3>
-                    <span class="faq-toggle">+</span>
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <span>What if therapy doesn't work for us?</span>
+                    <span class="faq-toggle">▼</span>
                 </div>
                 <div class="faq-answer">
-                    <div class="faq-answer-content">
-                        <p>
-                            Good question. If you feel we're not connecting or it's not the right fit, we can discuss 
-                            whether a different therapist might be better. My goal is YOUR wellbeing, not keeping you as a client. 
-                            Therapy works best when there's genuine trust and connection. If that's not there, let me know.
-                        </p>
-                    </div>
+                    <p>Therapy is a partnership. If it's not working, we'll talk openly about it. We can adjust our approach, explore what's not fitting, or I can help you find a better match.</p>
                 </div>
             </div>
 
             <div class="faq-item">
-                <div class="faq-question">
-                    <h3>Is this confidential information safe online?</h3>
-                    <span class="faq-toggle">+</span>
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <span>Is this confidential information safe online?</span>
+                    <span class="faq-toggle">▼</span>
                 </div>
                 <div class="faq-answer">
-                    <div class="faq-answer-content">
-                        <p>
-                            Yes. All online sessions use HIPAA-compliant, encrypted video platforms. Your data is never 
-                            shared or sold. I use secure email and messaging systems. Your privacy and security are non-negotiable. 
-                            I take every precaution to protect your information.
-                        </p>
-                    </div>
+                    <p>Absolutely. My online platform uses encryption and security measures that meet HIPAA standards. Your data is protected.</p>
                 </div>
             </div>
         </div>
@@ -2063,7 +1931,7 @@
         });
     });
 
-    // ============================================
+     // ============================================
     // TESTIMONIALS CAROUSEL
     // ============================================
     let testimonialOffset = 0;
@@ -2080,6 +1948,15 @@
         testimonialOffset = Math.max(testimonialOffset - testimonialWidth, 0);
         scroller.style.transform = `translateX(-${testimonialOffset}px)`;
     });
+    
+    // FAQ toggle
+function toggleFAQ(element) {
+    const question = element;
+    const answer = element.nextElementSibling;
+    
+    question.classList.toggle('active');
+    answer.classList.toggle('active');
+}
 
     // ============================================
     // FAQ ACCORDION
@@ -2096,6 +1973,7 @@
         });
     });
 
+    
     // ============================================
     // MODALS
     // ============================================
