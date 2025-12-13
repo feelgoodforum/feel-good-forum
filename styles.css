@@ -1,18 +1,24 @@
-body{
+body {
   padding: 25px;
 }
-.title {
-	color: #5C6AC4;
 
+/* Example title style – adjust to your typography system */
+.title {
+  color: #5C6AC4;
+}
+
+/* Testimonials section */
 #testimonials {
   background: var(--soft-white);
 }
 
+/* Intro text above the carousel */
 .testimonials-intro {
   text-align: center;
   margin-bottom: 40px;
 }
 
+/* Carousel wrapper */
 .testimonial-carousel {
   max-width: 780px;
   margin: 0 auto;
@@ -20,11 +26,13 @@ body{
   overflow: hidden;
 }
 
+/* Moving track */
 .testimonial-track {
   display: flex;
   transition: transform 0.6s cubic-bezier(0.22, 0.9, 0.28, 1);
 }
 
+/* Individual slide card */
 .testimonial-slide {
   min-width: 100%;
   box-sizing: border-box;
@@ -36,6 +44,7 @@ body{
   position: relative;
 }
 
+/* Decorative quote mark */
 .testimonial-slide::before {
   content: "“";
   font-size: 3.5rem;
@@ -46,6 +55,7 @@ body{
   font-family: "Playfair Display", serif;
 }
 
+/* Main testimonial text */
 .testimonial-slide p {
   color: white;
   margin-bottom: 18px;
@@ -53,6 +63,7 @@ body{
   font-size: 1.02rem;
 }
 
+/* Author line */
 .testimonial-author {
   font-weight: 600;
   font-size: 0.95rem;
@@ -61,7 +72,7 @@ body{
   opacity: 0.95;
 }
 
-/* dots */
+/* Dots container */
 .testimonial-dots {
   display: flex;
   justify-content: center;
@@ -69,6 +80,7 @@ body{
   margin-top: 14px;
 }
 
+/* Dot base state */
 .testimonial-dot {
   width: 8px;
   height: 8px;
@@ -77,19 +89,15 @@ body{
   transition: all 0.3s ease;
 }
 
+/* Active dot (current slide) */
 .testimonial-dot.active {
   width: 20px;
   background: var(--sage);
 }
 
+/* Mobile adjustments */
 @media (max-width: 768px) {
   .testimonial-slide {
     padding: 22px 18px;
   }
 }
-
-
-
-}
-
-
