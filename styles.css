@@ -310,11 +310,12 @@ nav a.active::after {
   font-size: 1.1rem;
   color: var(--gray);
   max-width: 600px;
-  margin: 0 auto;
+  /* Change "0 auto" to "0 auto 1rem" to add a tiny bit of extra buffer */
+  margin: 0 auto 1rem; 
 }
 
 .testimonial-carousel {
-  max-width: 800px;
+  max-width: 600px;
   margin: 0 auto;
   position: relative;
   overflow: hidden;
@@ -330,7 +331,7 @@ nav a.active::after {
   box-sizing: border-box;
   background: linear-gradient(135deg, var(--sage) 0%, var(--sage-dark) 100%);
   color: var(--white);
-  padding: var(--spacing-xl);
+  padding: var(--spacing-lg);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-lg);
   position: relative;
@@ -632,4 +633,3 @@ textarea {
 .mb-lg {
   margin-bottom: var(--spacing-lg);
 }
-
