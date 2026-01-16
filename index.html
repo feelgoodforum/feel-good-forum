@@ -1781,7 +1781,17 @@
 
             <div class="contact-form">
                 <h3 style="margin-bottom: 24px;">Send Me a Message</h3>
-                <form id="contactForm">
+                <form action="https://api.web3forms.com/submit" method="POST" id="contactForm">
+    
+    <input type="hidden" name="access_key" value="e00da243-55f6-4b88-ba97-2d56f2401c2f">
+
+    <input type="hidden" name="subject" value="New Inquiry from Feel Good Forum">
+    <input type="hidden" name="from_name" value="Website Client">
+    <input type="hidden" name="redirect" value="https://www.feelgoodforum.com"> 
+
+    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+    
                     <div class="form-row">
                         <div class="form-group">
                             <label for="name">Your Name *</label>
@@ -1919,7 +1929,10 @@
         <h3>Request a Free Consultation</h3>
         <p>Let's explore if we're the right fit. I'll reach out within 24 hours.</p>
 
-        <form id="consultForm">
+        <form action="https://api.web3forms.com/submit" method="POST" id="consultForm">
+    <input type="hidden" name="access_key" value="e00da243-55f6-4b88-ba97-2d56f2401c2f">
+    <input type="hidden" name="subject" value="New Consultation Request">
+    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
             <div class="form-group">
                 <label for="consult-name">Your Name *</label>
                 <input type="text" id="consult-name" required placeholder="Your full name">
@@ -2049,18 +2062,18 @@ function toggleFAQ(element) {
     // ============================================
     // FORM SUBMISSIONS
     // ============================================
-    document.getElementById("contactForm").addEventListener("submit", (e) => {
-        e.preventDefault();
-        alert("Thank you for reaching out! I will contact you within 24-48 hours.");
-        e.target.reset();
-    });
+  //  document.getElementById("contactForm").addEventListener("submit", (e) => {
+    //    e.preventDefault();
+     //   alert("Thank you for reaching out! I will contact you within 24-48 hours.");
+      //  e.target.reset();
+   // });
 
-    document.getElementById("consultForm").addEventListener("submit", (e) => {
-        e.preventDefault();
-        alert("Thank you! I've received your consultation request and will reach out shortly.");
-        e.target.reset();
-        modal.classList.remove("open");
-    });
+    //document.getElementById("consultForm").addEventListener("submit", (e) => {
+      //  e.preventDefault();
+        //alert("Thank you! I've received your consultation request and will reach out shortly.");
+        //e.target.reset();
+        //modal.classList.remove("open");
+    //});
 
     // ============================================
     // SMOOTH SCROLL BEHAVIOR
