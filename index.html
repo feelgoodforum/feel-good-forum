@@ -18,10 +18,11 @@
            THEME VARIABLES & CORE STYLES
            ============================================ */
         :root {
-            --bg: #FBFBFB;
-            --beige: #F7F3EC;
+            --bg: #F4F2EE;
+            --beige: #EBE7E0;
             --soft-white: #fff;
             --sage: #A8B5A0;
+            --sage-bg: #EEF2F0;
             --sage-dark: #8fa392;
             --sage-light: #c5cfc2;
             --muted: #6D6A63;
@@ -133,11 +134,12 @@
             position: sticky;
             top: 0;
             z-index: 1000;
-            background: rgba(255, 255, 255, 0.9);
+            background: rgba(255, 255, 255, 0.95); /* More opaque */
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); /* Slightly darker shadow */
             backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(10px);
             border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+            
         }
 
         .nav {
@@ -510,7 +512,8 @@
            ANNOUNCEMENTS SECTION
            ============================================ */
         #announcement {
-            background: var(--beige);
+            background: var(--bg);
+    border-bottom: 1px solid #E0E0E0; /* Adds a crisp line */
         }
 
         .tabs {
@@ -658,7 +661,7 @@
            SERVICES SECTION
            ============================================ */
         #services {
-            background: var(--soft-white);
+            background: linear-gradient(135deg, var(--beige) 0%, var(--soft-white) 100%);
         }
 
         .grid {
@@ -723,7 +726,7 @@
            MODALITIES SECTION
            ============================================ */
         #modalities {
-            background: var(--beige);
+            background: linear-gradient(135deg, var(--beige) 0%, var(--soft-white) 100%);
         }
 
         .modality-grid {
@@ -791,7 +794,7 @@
 
        /* Testimonials */
         .testimonials {
-            background: linear-gradient(135deg, #f7f3ec, white);
+            background: linear-gradient(180deg, var(--sage-bg) 0%, white 100%);
         }
 
         .testimonials-grid {
@@ -847,7 +850,7 @@
 
         /* FAQ */
         .faq {
-            background: white;
+            background: linear-gradient(135deg, var(--beige) 0%, var(--soft-white) 100%);
         }
 
         .faq-container {
@@ -921,7 +924,7 @@
            CONTACT SECTION
            ============================================ */
         #contact {
-            background: var(--beige);
+            background: linear-gradient(135deg, var(--beige) 0%, var(--soft-white) 100%);
         }
 
         .contact-container {
