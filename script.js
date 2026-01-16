@@ -143,3 +143,4 @@ const observer = new IntersectionObserver((entries) => {
 document.querySelectorAll('.service-card, .testimonial-slide, section > h2').forEach(el => {
   observer.observe(el);
 });
+
