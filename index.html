@@ -796,7 +796,7 @@
 
         .testimonials-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 24px;
             max-width: 1100px;
             margin: 0 auto;
@@ -1422,7 +1422,7 @@
 <!-- ===== ANNOUNCEMENTS ===== -->
 <section id="announcement" class="compact">
     <div class="wrap">
-        <h2>Latest Updates</h2>
+        <h2 style="text-align: center;">Latest Updates</h2>
 
         <div class="tabs">
             <button class="tab-btn active" data-tab="offers">Special Offers</button>
@@ -1445,7 +1445,7 @@
         <div id="updates" class="tab-content">
             <div class="announcement-item">
                 <h3>Now Offering Secure Online Therapy</h3>
-                <p>Connect from the comfort of your home with HIPAA-compliant video sessions. Same quality care, maximum convenience.</p>
+                <p>Connect from the comfort of your home on video sessions. Same quality care, maximum convenience.</p>
             </div>
         </div>
 
@@ -1468,7 +1468,7 @@
 <!-- ===== ABOUT ===== -->
 <section id="about">
     <div class="wrap">
-        <h2>About Me & My Practice</h2>
+        <h2 style="text-align: center;">About Me & My Practice</h2>
 
         <div class="content">
             <div class="glass-card">
@@ -1518,7 +1518,7 @@
 <!-- ===== SERVICES ===== -->
 <section id="services">
     <div class="wrap">
-        <h2>Services Tailored to Your Needs</h2>
+         <h2 style="text-align: center;">Services Tailored to Your Needs</h2>
         <p style="text-align: center; color: var(--muted-txt); max-width: 600px; margin: 0 auto 40px; font-size: 1.05rem;">
             Every person's journey is unique. I offer specialized services designed to meet you where you are.
         </p>
@@ -1590,7 +1590,7 @@
 <!-- ===== MODALITIES ===== -->
 <section id="modalities">
     <div class="wrap">
-        <h2>Evidence-Based Approaches</h2>
+        <h2 style="text-align: center;">Evidence-Based Approaches</h2>
         <p style="text-align: center; color: var(--muted-txt); max-width: 700px; margin: 0 auto 40px; font-size: 1.05rem;">
             I integrate multiple therapeutic modalities, selected based on your unique needs and preferences. 
             Here's an overview of the approaches I specialize in.
@@ -1646,27 +1646,24 @@
 <section class="testimonials" id="testimonials">
     <div class="wrap">
         <div class="section-title">
-            <h2>What Clients Say</h2>
-            <p>Real experiences from people who've found healing and growth</p>
+            <h2 style="text-align: center;">What Clients Say</h2>
+            <p style="text-align: center; color: var(--muted-txt); max-width: 700px; margin: 0 auto 40px; font-size: 1.05rem;">
+              Real experiences from people who've found healing and growth.
+            </p>
         </div>
 
         <div class="testimonials-grid">
             <div class="testimonial scroll-animate">
-                <p class="testimonial-text">"Working with this practice transformed my relationship with myself. I finally feel heard and safe."</p>
-                <p class="testimonial-author">Sarah M.</p>
-                <p class="testimonial-role">Individual Therapy Client</p>
+                <p class="testimonial-text">"Therapy scared me initially, but Dhwani’s warmth and patience helped me process grief, panic, and regain confidence."</p>
             </div>
 
             <div class="testimonial scroll-animate">
-                <p class="testimonial-text">"The couple's work helped us understand each other on a deeper level. Highly recommended!"</p>
-                <p class="testimonial-author">Rahul & Priya</p>
-                <p class="testimonial-role">Couples Therapy Clients</p>
+                <p class="testimonial-text">"I felt burnt out and disconnected from myself. Dhwani gently guided me back to clarity, balance, and emotional safety."</p>
+            
             </div>
 
             <div class="testimonial scroll-animate">
-                <p class="testimonial-text">"As a therapist myself, I was impressed by the depth and sensitivity of this practice."</p>
-                <p class="testimonial-author">Dr. Amit P.</p>
-                <p class="testimonial-role">Mental Health Professional</p>
+                <p class="testimonial-text">"I came to therapy when i was anxious, detached, and overwhelmed. Dhwani’s steady support helped me feel heard, grounded, and regaining control of my life."</p>
             </div>
         </div>
     </div>
@@ -1677,8 +1674,10 @@
 <section class="faq" id="faq">
     <div class="wrap">
         <div class="section-title">
-            <h2>Frequently Asked Questions</h2>
-            <p>Everything you need to know about getting started</p>
+            <h2 style="text-align: center;">Frequently Asked Questions</h2>
+            <p style="text-align: center; color: var(--muted-txt); max-width: 700px; margin: 0 auto 40px; font-size: 1.05rem;">
+              Everything you need to know about getting started
+              </p>
         </div>
 
         <div class="faq-container">
@@ -1712,15 +1711,6 @@
                 </div>
             </div>
 
-            <div class="faq-item">
-                <div class="faq-question" onclick="toggleFAQ(this)">
-                    <span>Do you specialize in my specific issue?</span>
-                    <span class="faq-toggle">▼</span>
-                </div>
-                <div class="faq-answer">
-                    <p>I work with a wide range of concerns: anxiety, depression, trauma, relationship issues, identity questions, life transitions, family dynamics, and workplace stress. If your specific need falls outside my expertise, I'm happy to refer you to a specialist.</p>
-                </div>
-            </div>
 
             <div class="faq-item">
                 <div class="faq-question" onclick="toggleFAQ(this)">
@@ -1728,7 +1718,7 @@
                     <span class="faq-toggle">▼</span>
                 </div>
                 <div class="faq-answer">
-                    <p>Yes! I offer secure, HIPAA-compliant video sessions from your home. Same professional care, greater convenience.</p>
+                    <p>Yes! I offer secure video sessions from your home. Same professional care, greater convenience.</p>
                 </div>
             </div>
 
@@ -1738,17 +1728,7 @@
                     <span class="faq-toggle">▼</span>
                 </div>
                 <div class="faq-answer">
-                    <p>Therapy is a partnership. If it's not working, we'll talk openly about it. We can adjust our approach, explore what's not fitting, or I can help you find a better match.</p>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question" onclick="toggleFAQ(this)">
-                    <span>Is this confidential information safe online?</span>
-                    <span class="faq-toggle">▼</span>
-                </div>
-                <div class="faq-answer">
-                    <p>Absolutely. My online platform uses encryption and security measures that meet HIPAA standards. Your data is protected.</p>
+                    <p>Therapy is a partnership. If it's not working, we'll talk openly about it. We can adjust our approach, explore what's not fitting.</p>
                 </div>
             </div>
         </div>
@@ -1758,7 +1738,7 @@
 <!-- ===== CONTACT ===== -->
 <section id="contact">
     <div class="wrap">
-        <h2>Let's Connect</h2>
+        <h2 style="text-align: center;">Let's Connect</h2>
         <p style="text-align: center; color: var(--muted-txt); max-width: 700px; margin: 0 auto 40px; font-size: 1.05rem;">
             Ready to start your healing journey? I'm here to answer questions and help you book your first session.
         </p>
